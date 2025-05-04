@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import OrderRoutes from './app/Modules/Order/order.route';
 import BookRoutes from './app/Modules/Book/Book.Route';
-import OrderRoutes from './app/Modules/Order/Order.Route';
 // import { StudentRoutes } from './app/Modules/Student/Student.router';
 const app = express();
 

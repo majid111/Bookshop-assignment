@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { orderService } from './Order.Service';
+import { orderService } from './order.service';
 
 const createOrder = (req: Request, res: Response) => {
   try {
