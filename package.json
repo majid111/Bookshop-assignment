@@ -5,10 +5,11 @@
   "scripts": {
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
-    "start": "nodemon --exec ts-node-dev src/index.ts",
+    "start": "node dist/server.js",
+    "dev": "tsnd --respawn src/server.ts",
     "build": "tsc",
-    "format": "prettier --write 'src/**/*.ts'",
-    "format:fix": "prettier --write 'src/**/*.ts'",
+    "prettier": "prettier --write 'src/**/*.ts'",
+    "prettier:fix": "prettier --write 'src/**/*.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,7 +23,8 @@
     "mongodb": "^6.13.1",
     "mongoose": "^8.10.1",
     "nodemon": "^3.1.9",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
