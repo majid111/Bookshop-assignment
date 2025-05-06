@@ -63,13 +63,13 @@ const UpdateABook = async (req: Request, res: Response) => {
     const result = await BookServices.UpdateABook(id, updateData);
     res.status(201).json({
       success: true,
-      message: 'Book deleted successfully',
+      message: 'Book updated successfully',
       data: result,
     });
   } catch (error: any) {
     res.status(500).json({
       success: false,
-      message: error.message || 'Book is not deleted',
+      message: error.message || 'Book is not updated',
       data: error,
     });
   }

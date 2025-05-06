@@ -1,9 +1,11 @@
 import express from 'express';
 import { orderController } from './order.controller';
+import { Request, Response } from 'express';
 // import { OrderValidation } from './Order.Validation';
 
-const router = express.Router();
-router.post('/', orderController.createOrder); // Create a new order
-// router.get('/getSingleOrder', orderController.getSingleOrder); // Get a single order by ID
-router.get('/revenue', orderController.revenue);
-export const OrderRoutes = router;
+const OrderRouter = express.Router();
+OrderRouter.post('/', orderController.createOrder); // Create a new order
+
+OrderRouter.get('/revenue', orderController.revenue);
+OrderRouter.get('/', orderController.getAllOrders);
+export default OrderRouter;

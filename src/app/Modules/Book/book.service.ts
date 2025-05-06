@@ -18,14 +18,11 @@ const getSingleBook = async (id: string) => {
   return result;
 };
 const deleteABook = async (id: string) => {
-  const result = await Book.findByIdAndDelete({ id });
+  const result = await Book.findByIdAndDelete(id);
   return result;
 };
-const UpdateABook = async (id: string, updateData: TUpdateBook) => {
-  const result = await Book.findByIdAndUpdate(
-    { id, updateData },
-    { new: true },
-  );
+const UpdateABook = async (id: string, updateData: TBook) => {
+  const result = await Book.findByIdAndUpdate(id, updateData, { new: true });
   return result;
 };
 export const BookServices = {
